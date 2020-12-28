@@ -9,6 +9,6 @@ RUN cd /tmp && tar xvfz tomcat.tar.gz
 RUN cp -Rv /tmp/apache-tomcat-8.5.61-src/* /opt/tomcat/
 WORKDIR /app
 COPY . .
-CMD mvn clean install
+RUN mvn clean install
 RUN cp target/WebApp.war /opt/tomcat/webapps/
 EXPOSE 8080
