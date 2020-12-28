@@ -12,3 +12,4 @@ COPY . .
 RUN mvn clean install
 RUN cp target/WebApp.war /opt/tomcat/webapps/
 EXPOSE 8080
+CMD tail -f /opt/tomcat/logs/catalina.out
